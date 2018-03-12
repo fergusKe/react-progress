@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+// import { AppContainer } from 'react-hot-loader';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import Main from './containers';
 
 const render = () => {
   ReactDOM.render(
-    <AppContainer>
-      <Main />
-    </AppContainer>,
+    <Main />,
     document.getElementById('root'),
   );
 };
@@ -16,7 +15,7 @@ const render = () => {
 render();
 
 if (module.hot) {
-  module.hot.accept('./containers', () => {
-    render();
-  });
+  // module.hot.accept('./containers', () => {
+  //   render();
+  // });
 }
