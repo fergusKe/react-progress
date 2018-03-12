@@ -34,13 +34,13 @@ class Progress extends Component {
 
   render() {
     const { count, target } = this.state;
-    const progress = `${String(count)}%`;
-    const targetVal = `${String(target)}%`;
 
     return (
       <div className="container mt-5">
         <div className="progress">
-          <div className="progress-bar" role="progressbar" style={{width: targetVal}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{progress}</div>
+          <div className="progress-bar" role="progressbar" style={{width: `${String(target)}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            {`${String(count)}%`}
+          </div>
         </div>
         <button type="button" className="mt-2 btn btn-primary" onClick={this.toggle}>toggle</button>
       </div>
